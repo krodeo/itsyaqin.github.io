@@ -40,7 +40,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 	/*SIDEBAR WIDTH*/
 	width: 240px;
 	overflow-y: auto;
-	z-index: 1;
+	z-index: 1000;
 }
 
 #sidebar-wrapper{
@@ -149,6 +149,11 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 	display: none;
 }
 
+.sidebar-show #sidebar{
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.4s ease;
+}
+
 #content{
 	position: relative;
 	width: calc(100% - 240px);
@@ -237,6 +242,7 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 @media(max-width: 992px){
 	#sidebar{
 		width: 70px;
+		transition: width 0.4s ease;
 	}
 	
 	#sidebar .sidebar-title,
@@ -277,7 +283,8 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 
 @media(max-width: 768px){
 	#sidebar{
-		display: none;
+		transform: translate3d(-70px, 0, 0);
+		transition: transform 0.4s ease;
 	}
 
 	.sidebar-toggle, .sidebar-close{

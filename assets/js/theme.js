@@ -1,7 +1,10 @@
-$(".sidebar-toggle").click(function(){
-	$("#sidebar").show(200);
-});
+$(document).ready(function(){
+	$(".sidebar-toggle").click(function(e){
+		e.preventDefault();
+		$("#wrapper").addClass('sidebar-show');
 
-$(".sidebar-close").click(function(){
-	$("#sidebar").hide(200);
+		$(".sidebar-close").click(function(){
+			$("#wrapper").removeClass('sidebar-show');
+		});
+	});
 });
