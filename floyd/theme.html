@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Floyd</title>
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/theme-floyd.css">
+	<link rel="stylesheet" href="assets/css/theme-helper.css">
+</head>
+<style>
+	.panel, button{
+		transition: background-color 0.5s ease, border-color 0.5s ease;
+	}
+	pre{
+		background-color: transparent;
+	}
+
+	.panel-fill pre{
+		border-color: #FFF;
+		color: #FFF;
+	}
+
+	.btn-pink{background-color:#ff4d76; color: #FFF}
+	.btn-pink:hover{background-color:#ff1a4f;color: #FFF}
+	.btn-purple{background-color:#CAA7E2; color: #FFF}
+	.btn-purple:hover{background-color:#8c40bf;color: #FFF}
+	.btn-red{background-color:#F63E38; color: #FFF}
+	.btn-red:hover{background-color:#db110a;color: #FFF}
+	.btn-blue{background-color:#00AFD1; color: #FFF}
+	.btn-blue:hover{background-color:#008099;color: #FFF}
+	.btn-green{background-color:#1FBBA6; color: #FFF}
+	.btn-green:hover{background-color:#158475;color: #FFF}
+</style>
+<body>
+	<div id="wrapper">
+		<div id="sidebar">
+			<div id="sidebar-wrapper">
+				<div class="sidebar-title">
+					<span class="text-size-40 text-loose">floyd</span><br>
+					<span class="text-size-18 text-grey">colorful as it is</span>
+				</div>
+				<div class="sidebar-avatar">
+					<div class="sidebar-avatar-image"><img src="assets/images/me.PNG" alt="" class="img-circle"></div>
+					<div class="sidebar-avatar-text">Ainul</div>
+				</div>
+				<ul class="sidebar-nav">
+					<li class="sidebar-close"><a href="#"><i class="fa fa-fw fa-close"></i></a></li>
+					<li><a href="index.html"><i class="fa fa-fw fa-star"></i><span>Features</span></a></li>
+					<li><a href="typography.html"><i class="fa fa-fw fa-font"></i><span>Typography</span></a></li>
+					<li><a href="form.html"><i class="fa fa-fw fa-list-alt"></i><span>Form</span></a></li>
+					<li>
+						<a href="#nav-dropdown1" data-toggle="collapse" aria-controls="nav-dropdown1">
+							<i class="fa fa-fw fa-window-maximize"></i><span>Panel &amp Alert</span>
+							<span class="sidebar-nav-arrow"><i class="fa fa-angle-down"></i></span>
+						</a>
+						<ul class="sidebar-nav-child collapse collapseable" id="nav-dropdown1">
+							<li><a href="panel.html"><i class="fa fa-fw fa-window-maximize"></i><span>Panel</span></a></li>
+							<li><a href="modal.html"><i class="fa fa-fw fa-window-restore"></i><span>Modal</span></a></li>
+							<li><a href="alert.html"><i class="fa fa-fw fa-bell"></i><span>Alert</span></a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="theme.html"><i class="fa fa-fw fa-paint-brush"></i><span>Theme</span></a></li>
+					<li><a href="updates.html"><i class="fa fa-fw fa-wrench"></i><span>Updates &amp Fixes</span></a></li>
+				</ul>
+				<div class="sidebar-footer">
+					<hr style="border-color: #DDD">
+					<span>
+						created by <a href="http://ainuls.github.io" target="_blank" class="text-default">ainul yaqin</a><br>
+						<a href="mailto:ainul086@gmail.com">ainul086@gmail.com</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="main-panel">
+			<div id="top-nav">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<!-- Navbar toggle button -->
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+								<i class="fa fa-bars"></i>
+							</button>
+							<!-- Sidebar toggle button -->
+							<button type="button" class="sidebar-toggle">
+								<i class="fa fa-bars"></i>
+							</button>
+							<a class="navbar-brand text-size-24" href="#"><i class="fa fa-paint-brush"></i> Theme</a>
+						</div>
+						<div class="collapse navbar-collapse" id="menu">
+							<ul class="nav navbar-nav navbar-right">
+								<li>
+									<a href="#">
+										<span class="fa-stack">
+											<i class="fa fa-circle fa-stack-2x"></i>
+											<i class="fa fa-cog fa-stack-1x"></i>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="fa-stack">
+											<i class="fa fa-circle fa-stack-2x"></i>
+											<i class="fa fa-power-off fa-stack-1x"></i>
+										</span>
+									</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+										<span class="fa-stack">
+											<i class="fa fa-circle fa-stack-2x"></i>
+											<i class="fa fa-user fa-stack-1x"></i>
+										</span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="#"><i class="fa fa-fw fa-bell-o"></i> Action</a></li>
+										<li><a href="#"><i class="fa fa-fw fa-camera"></i> Another action</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div id="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title"><i class="fa fa-star-o space-right-5"></i> Feel the magic</h3>
+								</div>
+								<div class="panel-body">
+									<p class="break-bottom-20">
+										<span class="text-default">FLOYD</span> dilengkapi dengan beberapa tema yang dapat diubah sesuai keinginan. Hanya dengan menerapkan satu kelas dan biarkan <span class="text-default">FLOYD</span> melakukan sisanya.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<div class="panel panel-default panel-fill">
+								<div class="panel-heading">
+									<h3 class="panel-title"><i class="fa fa-terminal space-right-5"></i> The code</h3>
+								</div>
+								<div class="panel-body">
+									<pre>&ltbody class="<span></span>"&gt<br>...<br>&lt/body&gt</pre>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title"><i class="fa fa-coffee space-right-5"></i> Try it out!</h3>
+								</div>
+								<div class="panel-body">
+									<button class="btn btn-pink btn-theme" data-class="">Default</button>
+									<button class="btn btn-purple btn-theme" data-class="floyd-purple">Purple</button>
+									<button class="btn btn-red btn-theme" data-class="floyd-red">Red</button>
+									<button class="btn btn-blue btn-theme" data-class="floyd-blue">Blue</button>
+									<button class="btn btn-green btn-theme" data-class="floyd-green">Greeen</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title"><i class="fa fa-asterisk space-right-5"></i> Komponen yang terpengaruhi</h3>
+								</div>
+								<div class="panel-body">
+									<h3>Teks</h3>
+									<p>Teks ini tak berubah namun <span class="text-default"><b>teks ini akan berubah.</b></span></p>
+									<pre>&ltspan class="text-default"&gt...&lt/span&gt</pre>
+									<h3 class="break-top-20">Tombol</h3>
+									<button class="btn btn-floyd break-bottom-10"><i class="fa fa-bullhorn"></i> om telolet, om!</button>
+									<p>Untuk class .btn tidak menimpa class bawaan Bootstrap .btn-default. Oleh karena itu FLOYD memiliki kelas sendiri untuk tema .btn</p>
+									<pre>&ltbutton class="btn btn-floyd"&gt...&lt/button&gt</pre>
+									<h3 class="break-top-20">Panel</h3>
+									<pre>&ltdiv class="panel panel-default"&gt...&lt/div&gt<br>&ltdiv class="panel panel-default panel-fill"&gt...&lt/div&gt</pre>
+									<h3 class="break-top-20">Alert</h3>
+									<div class="alert alert-default" role="alert"><strong>om telolet, om!</strong> Lorem ipsum dolor sit amet.</div>
+									<pre>&ltdiv class="alert alert-default"&gt...&lt/div&gt</pre>
+									<h3 class="break-top-20">Modal</h3>
+									<button type="button" class="btn btn-floyd break-bottom-10" data-toggle="modal" data-target="#myModal" data-class="modal-default"><i class="fa fa-cog"></i> Tes Modal</button>
+									<pre>&ltdiv class="modal-dialog modal-default"&gt...&lt/div&gt</pre>
+									<h3 class="break-top-20">Sidebar menu, Sidebar teks logo &amp Navbar menu</h3>
+									<p>Komponen ini tak perlu class tambahan karena warna akan berganti secara otomatis.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-default" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<span></span>
+				</div>
+				<div class="modal-body">
+					<p class="text-center">
+						<span class="text-size-32"><i class="fa fa-bullhorn fa-2x"></i></span><br><br>
+						<span class="text-size-24">om telolet, om!</span><br>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas<br>molestias perspiciatis dicta officiis.</span>
+					</p>
+				</div>
+				<div class="modal-footer"></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="assets/plugins/jquery/jquery-3.1.1.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/theme-floyd.js"></script>
+<script>
+	$(".btn-theme").each(function(){
+		var cls = $(this).data('class');
+		$(this).click(function(){
+			$("body").removeClass().addClass(cls);
+			$("pre > span").empty().html(cls);
+		});
+	});
+</script>
+</html>
