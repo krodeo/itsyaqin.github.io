@@ -2,217 +2,98 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Funtasting Admin Panel</title>
+	<title>ainulyakins</title>
 	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/theme.css">
 	<link rel="stylesheet" href="assets/css/theme-helper.css">
 </head>
 <body>
-	<div class="container-fluid" id="wrapper">
-		<div id="sidebar">
-			<div id="sidebar-wrapper">
-				<div class="sidebar-title"><h2>Funtasting</h2><span>AdminPanel</span></div>
-				<ul class="sidebar-nav">
-					<li class="sidebar-close"><a href="#"><i class="fa fa-fw fa-close"></i></a></li>
-					<li class="active"><a href="#"><i class="fa fa-fw fa-home"></i><span class="nav-label">Dashboard</span></a></li>
-					<li>
-						<a href="#nav-dokumen" data-toggle="collapse" aria-controls="nav-dokumen"><i class="fa fa-fw fa-archive"></i><span class="nav-label">Dokumen</span></a>
-						<ul class="sidebar-nav-child collapse collapseable" id="nav-dokumen">
-							<li><a href="#"><i class="fa fa-upload"></i><span class="nav-label">Pengajuan Baru</span></a></li>
-							<li><a href="#"><i class="fa fa-bookmark"></i><span class="nav-label">Arsip Lama</span></a></li>
-							<li><a href="#"><i class="fa fa-envelope-o"></i><span class="nav-label">Surat-Surat</span></a></li>
+	<div class="wrapper">
+		<div id="top-nav">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<!-- Navbar toggle button -->
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+							<i class="fa fa-bars"></i>
+						</button>
+						<a class="navbar-brand text-size-24" href="#">ainulyakins</a>
+					</div>
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a data-scroll href="#sec-main">home</a></li>
+							<li><a data-scroll href="#sec-two">collections</a></li>
+							<li><a data-scroll href="#sec-three">stay in touch!</a></li>
 						</ul>
-					</li>
-					<li><a href="#"><i class="fa fa-fw fa-user"></i><span class="nav-label">Pegawai</span></a></li>
-					<li><a href="#"><i class="fa fa-fw fa-cog"></i><span class="nav-label">Pengaturan</span></a></li>
-				</ul>
-				<div class="sidebar-footer">
-					<button class="btn btn-default btn-block"><i class="fa fa-fw fa-power-off"></i><span class="nav-label">logout</span></button>
+					</div>
 				</div>
-			</div>
+			</nav>
 		</div>
 		<div id="content">
-			<div class="content-nav">
-				<nav class="navbar navbar-default">
-					<div class="container-fluid">
-						<div class="navbar-header">
-							<!-- Navbar toggle button -->
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
-								<i class="fa fa-bars"></i>
-							</button>
-							<!-- Sidebar toggle button -->
-							<button type="button" class="sidebar-toggle">
-								<i class="fa fa-bars"></i>
-							</button>
-							<a class="navbar-brand text-size-24" href="#">Dashboard</a>
-						</div>
-						<div class="collapse navbar-collapse" id="menu">
-							<form class="navbar-form navbar-right">
-								<div class="input-group">
-									<input type="text" class="form-control round" placeholder="Search">
-									<span class="input-group-btn">
-										<button type="submit" class="btn btn-default round"><i class="fa fa-search"></i></button>
-									</span>
+			<div id="sec-main" class="img-fade">
+				<span class="text-size-40 break-bottom-20"><span class="text-bold">design is</span> thinking made <span class="text-bold">visible</span></span>
+				<a href="#sec-two" class="btn btn-default btn-round">browse my collections</a>
+			</div>	
+			<div id="sec-two" class="img-fade-light text-center">
+				<span class="text-size-32 text-bold">MY COLLECTIONS</span>
+				<p>Feel free to browse my collection. It's all and always free</p>
+				<div class="line-separator block-center break-top-20"></div>
+				<div class="list">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4">
+							<div class="thumbnail">
+								<img src="assets/images/groot.png" alt="groot">
+								<div class="caption text-left">
+									<h3 class="break-bottom-0">GROOT</h3>
+									<span class="text-grey">Very light CSS framework</span>
+									<div class="break-10"></div>
+									<a href="http://github.com/ainuls/groot" class="btn btn-xs btn-primary btn-round">download</a>
+									<a href="http://http://getgroot.xyz/" class="btn btn-xs btn-default btn-round">demo</a>
 								</div>
-							</form>
-							<ul class="nav navbar-nav navbar-right">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ainul Yaqin <span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Action</a></li>
-										<li><a href="#">Another action</a></li>
-									</ul>
-								</li>
-							</ul>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<div class="thumbnail">
+								<img src="assets/images/funtasting.png" alt="funtasting">
+								<div class="caption text-left">
+									<h3 class="break-bottom-0">FUNTASTING</h3>
+									<span class="text-grey">Clean Boostrap admin panel</span>
+									<div class="break-10"></div>
+									<a href="http://github.com/ainuls/funtasting" class="btn btn-xs btn-primary btn-round">download</a>
+									<a href="http://ainuls.github.io/template/funtasting" class="btn btn-xs btn-default btn-round">demo</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<div class="thumbnail">
+								<img src="assets/images/floyd.png" alt="floyd">
+								<div class="caption text-left">
+									<h3 class="break-bottom-0">FLOYD</h3>
+									<span class="text-grey">Clean and colorful bootstrap template</span>
+									<div class="break-10"></div>
+									<a href="http://github.com/ainuls/floyd" class="btn btn-xs btn-primary btn-round">download</a>
+									<a href="http://ainuls.github.io/template/floyd" class="btn btn-xs btn-default btn-round">demo</a>
+								</div>
+							</div>
 						</div>
 					</div>
-				</nav>
+				</div>
 			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="panel panel-default panel-widget">
-							<div class="panel-body">
-								<h4>Main Title</h4>
-								<div class="break-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="panel panel-default panel-widget">
-							<div class="panel-body">
-								<h4>Main Title</h4>
-								<div class="break-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<div class="panel panel-default panel-widget">
-							<div class="panel-body">
-								<h4>Main Title</h4>
-								<div class="break-5">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<span class="panel-title pull-left text-black"><i class="fa fa-fw fa-users"></i> Staff Management</span>
-								<div class="btn-group btn-group-sm pull-right" role="group">
-									<a class="btn btn-default" href="#"><i class="fa fa-fw fa-refresh"></i> <span class="hidden-sm">refresh</span></a>
-									<a class="btn btn-default" href="#"><i class="fa fa-fw fa-plus"></i> <span class="hidden-sm">new</span></a>
-									<button class="btn btn-default" data-toggle="modal" data-target="#import-dialog"><i class="fa fa-fw fa-upload"></i> <span class="hidden-sm">import</span></button>
-								</div>
-								<!-- QUICK SEARCH -->
-								<form action="#" class="pull-right hidden-xs">
-									<div class="form-group">
-										<div class="input-group input-group-sm">
-											<input type="text" class="form-control" placeholder="search">
-											<span class="input-group-btn">
-												<button class="btn btn-default"><i class="fa fa-search"></i></button>
-											</span>
-										</div>
-									</div>
-								</form>
-								<div class="clearfix"></div>
-							</div>
-							<div class="panel-body table-responsive table-full">
-								<table class="table table-stripped table-hover table-bordered">
-									<thead>
-										<tr>
-											<th class="text-center">Staff ID</th>
-											<th>First Name</th>
-											<th>Last Name</th>
-											<th class="text-center text-nowrap">Cafe Branch</th>
-											<th class="text-center text-nowrap">Position</th>
-											<th class="text-center text-nowrap">Gender</th>
-											<th class="text-center text-nowrap">Action</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<!-- FORM FILTER -->
-											<form action="#">
-												<td><input type="text" class="form-control input-sm" name="id" placeholder="staff id"></td>
-												<td><input type="text" class="form-control input-sm" name="first_name" placeholder="first name"></td>
-												<td><input type="text" class="form-control input-sm" name="last_name" placeholder="last name"></td>
-												<td>
-													<select name="branch_id" class="form-control input-sm">
-														<option value="">All</option>
-														<option value="1">Branch #1</option>
-													</select>
-												</td>
-												<td>
-													<select name="position_id" class="form-control input-sm">
-														<option value="">All</option>
-														<option value="1">Position #1</option>
-													</select>
-												</td>
-												<td>
-													<select name="gender" class="form-control input-sm">
-														<option value="">All</option>
-														<option value="0">Male</option>
-														<option value="1">Female</option>
-													</select>
-												</td>
-												<td><button class="btn btn-sm btn-default btn-block"><i class="fa fa-search"></i></button></td>
-											</form>
-										</tr>
-										<!-- DATA START HERE -->
-										<tr>
-											<td class="text-center text-nowrap">stf00001</td>
-											<td>Ainul</td>
-											<td>Yakin</td>
-											<td class="text-center text-nowrap">Branch One</td>
-											<td class="text-center text-nowrap">Manager</td>
-											<td class="text-center text-nowrap">Male</td>
-											<td class="text-center text-nowrap">
-												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-info-circle"></i></a>
-												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-trash"></i></a>
-											</td>
-										</tr>
-										<tr>
-											<td class="text-center text-nowrap">stf00002</td>
-											<td>Diego</td>
-											<td>Luna</td>
-											<td class="text-center text-nowrap">Branch Two</td>
-											<td class="text-center text-nowrap">Sales Manager</td>
-											<td class="text-center text-nowrap">Male</td>
-											<td class="text-center text-nowrap">
-												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-info-circle"></i></a>
-												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-trash"></i></a>
-											</td>
-										</tr>
-										<tr>
-											<td class="text-center text-nowrap">stf00003</td>
-											<td>Alex</td>
-											<td>Maxwell</td>
-											<td class="text-center text-nowrap">Branch Three</td>
-											<td class="text-center text-nowrap">Advertising</td>
-											<td class="text-center text-nowrap">Male</td>
-											<td class="text-center text-nowrap">
-												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-info-circle"></i></a>
-												<a href="#" class="btn btn-default btn-xs"><i class="fa fa-trash"></i></a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="panel-footer">
-								<span class="panel-footer-text text-grey text-size-12"><i class="fa fa-info-circle"></i> last edited at 02/01/2016 18:00</span>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div id="sec-three">
+				<h2 class="break-bottom-20">stay in touch!</h2>
+				<p class="break-bottom-30">Jika anda memiliki pertanyaan atau ingin mengajak kerjasama, anda bisa <br>menghubungi saya melalui alamat dibawah.</p>
+				<span>Mohammad Ainul Yaqin</span>&nbsp|&nbsp
+				<span><a href="mailto:ainul086@gmail.com">ainul086@gmail.com</a></span>&nbsp|&nbsp
+				<span>+62-8574-6568-731</span><br>
 			</div>
 		</div>
 	</div>
 </body>
 <script src="assets/plugins/jquery/jquery-3.1.1.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/theme.js"></script>
+<script src="assets/plugins/smooth-scroll/smooth-scroll.js"></script>
+<script>
+	$("a").smoothScroll();
+</script>
 </html>
