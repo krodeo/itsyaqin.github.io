@@ -58,6 +58,20 @@ p{
 #top-nav > .navbar .navbar-brand{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
+	padding: 0;
+	padding-top: 10px;
+}
+
+#top-nav > .navbar .navbar-brand img{
+	display: inline-block;
+	height: 35px;
+	object-fit: cover;
+	object-position: center;
+	margin: 0;
+}
+
+#top-nav > .navbar .navbar-brand span{
+	font-family: 'Montserrat',sans-serif;
 }
 
 #top-nav > .navbar .navbar-nav > li > a{
@@ -192,6 +206,11 @@ p{
 }
 
 @media(max-width: 768px){
+
+	.navbar-brand > span{
+		display: none;
+	}
+
 	#sec-two{
 		height: auto;
 	}
