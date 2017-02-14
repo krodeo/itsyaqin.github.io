@@ -160,6 +160,20 @@ p{
 	color: #DDD;
 }
 
+.sosmed{
+	display: block;
+	margin-top: 10px;
+}
+
+.sosmed > a{
+	margin: 10px;
+	font-size: 20px;
+}
+
+.sosmed > a:first-child{
+	margin-left: 0px;
+}
+
 .line-separator{
 	width: 100px;
 	border-bottom: 2px #555 solid;
