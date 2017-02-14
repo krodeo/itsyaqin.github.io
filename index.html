@@ -94,6 +94,10 @@
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/smooth-scroll/smooth-scroll.js"></script>
 <script>
-	$("a").smoothScroll();
+	$(document).ready(function(){
+		$("a").smoothScroll();
+		var num = Math.floor((Math.random()*7)+1);
+		$("#sec-main").css('background-image',"url('assets/images/bg/bg"+num+".jpg')");
+	});
 </script>
 </html>
