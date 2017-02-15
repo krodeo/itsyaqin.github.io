@@ -46,13 +46,26 @@ p{
 }
 
 #top-nav > .navbar{
-	padding: 15px 30px;
+	padding: 20px 50px;
+	padding-bottom: 10px;
 	background-color: transparent;
 	border:none;
+	transition: background-color 0.5s ease, padding 0.5s ease;
 }
 
 #top-nav > .navbar *{
 	color: #FFF;!important
+}
+
+#top-nav > .navbar.scrolled{
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background-color: #FFF;
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+#top-nav > .navbar.scrolled *{
+	color: #333;!important
 }
 
 #top-nav > .navbar .navbar-brand{

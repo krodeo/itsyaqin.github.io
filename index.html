@@ -18,7 +18,7 @@
 <body>
 	<div class="wrapper">
 		<div id="top-nav">
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<!-- Navbar toggle button -->
@@ -26,7 +26,7 @@
 							<i class="fa fa-bars"></i>
 						</button>
 						<a class="navbar-brand text-size-24" href="">
-							<img src="assets/images/Logo0.png" alt="" class="img-responsive">
+							<!-- <img src="assets/images/Logo0.png" alt="" class="img-responsive"> -->
 							<span>ainulyakins</span>
 						</a>
 					</div>
@@ -108,12 +108,5 @@
 </body>
 <script src="assets/plugins/jquery/jquery-3.1.1.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/plugins/smooth-scroll/smooth-scroll.js"></script>
-<script>
-	$(document).ready(function(){
-		$("a").smoothScroll();
-		var num = Math.floor((Math.random()*8)+1);
-		$("#sec-main").css('background-image',"url('assets/images/bg/bg"+num+".jpg')");
-	});
-</script>
+<script src="assets/js/theme.js"></script>
 </html>
