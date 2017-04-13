@@ -1,8 +1,7 @@
 $(document).ready(function(){
-	window.location = "munir-levi.tk/e-vite";
-	// smoothScroll();
-	// randomBG(8);
-	// scrollNavbar();
+	smoothScroll();
+	randomBG(8);
+	scrollNavbar();
 });
 
 function randomBG(num)
