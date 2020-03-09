@@ -55,3 +55,25 @@ h2{
 .box a svg{
 	margin-right: .5rem!important;
 }
+
+@media only screen and (max-width:768px){
+	body{
+		padding: 0 1rem;
+	}
+
+	.box > i{
+		font-size: 2rem;
+	}
+
+	h1{
+		font-size: 2.5rem;
+	}
+	
+	h2{
+		font-size: 1rem;
+	}
+
+	.box ul li{
+		margin:0 .1rem;
+	}
+}
