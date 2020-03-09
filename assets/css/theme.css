@@ -1,234 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500|Montserrat:700');
 
-*{
+:root{
+	font-family: 'roboto';
+	font-size: 16px;
+}
+
+body{
 	padding: 0;
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
 }
 
-div{
-	box-sizing: border-box;
+h1{
+	font-family: 'Montserrat';
+	font-size: 4rem;
+	margin: 0;
 }
 
-body, html{
-	width: 100%;
-	height: 100%;
-	font-family: 'Roboto', sans-serif;
+h2{
 	font-weight: 300;
-	background-color: #3B3B3B;
+	margin:0;
+	font-size: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6,
-h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	margin: 0;
-	margin-bottom: 5px;
-}
-
-p{
-	line-height: 22px;
-}
-
-#wrapper{
-	width: 100%;
-	min-height: 100%;
-	max-height: none;
-	padding: 0;
-}
-
-#top-nav{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-}
-
-#top-nav > .navbar{
-	padding: 20px 50px;
-	padding-bottom: 10px;
-	background-color: transparent;
-	border:none;
-	transition: background-color 0.5s ease, padding 0.5s ease;
-}
-
-#top-nav > .navbar *{
-	color: #FFF;!important
-}
-
-#top-nav > .navbar.scrolled{
-	padding-top: 15px;
-	padding-bottom: 5px;
-	background-color: #FFF;
-	box-shadow: 0 1px 3px rgba(0,0,0,.3);
-}
-
-#top-nav > .navbar.scrolled *{
-	color: #333;!important
-}
-
-#top-nav > .navbar .navbar-brand{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	padding: 0;
-	padding-top: 10px;
-}
-
-#top-nav > .navbar .navbar-brand img{
-	display: inline-block;
-	height: 35px;
-	object-fit: cover;
-	object-position: center;
-	margin: 0;
-}
-
-#top-nav > .navbar .navbar-brand span{
-	font-family: 'Montserrat',sans-serif;
-}
-
-#top-nav > .navbar .navbar-nav > li > a{
-	padding: 5px 10px;
-	margin: 5px;
-	letter-spacing: 1px;
-	transition: border-color 0.5s ease;
-}
-
-#top-nav > .navbar .navbar-nav > li > a:hover{
-	padding: 4px 9px;
-	border:1px rgba(255,255,255,.5) solid;
-	border-radius: 20px;
-}
-
-#content{
-	position: relative;
-	width: 100%;
-}
-
-#content > div{
-	position: relative;
-}
-
-#sec-main{
+.box{
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-
-	height: 100vh;
-	max-height: 100vh;
-	background: url(../images/bg/bg4.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-
-	font-weight: 300;
-	color: #FFF;
+	justify-content: center;
+	flex-direction: column;
 }
 
-#sec-main .btn{
-	background-color: transparent;
-	color: #FFF;
-	transition: background-color 0.5s ease;
-	padding: 10px 15px;
+.box ul{
+	list-style: none;
+	display:  flex;
+	margin-top: 3rem;
 }
 
-#sec-main .btn:hover{
-	background-color: rgba(255,255,255,.3);
+.box ul li{
+	margin:0 .5rem;
 }
 
-#sec-two{
-	width: 100%;
-	height: 100vh;
-	padding: 50px 50px;
-	background-color: #FFF;
-	background: url(../images/bg/bg5.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	color: #555;
-}
-
-#sec-two > .list{
-	width: 75%;
-	margin: 100px auto;
-}
-
-#sec-two > .list .thumbnail{
-	padding: 0;
-	border: none;
-	border-radius: 3px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-	transition: box-shadow 0.5s ease;
-}
-
-#sec-two > .list .thumbnail:hover{
-	box-shadow: 0 0 15px rgba(0,0,0,0.5);
-	cursor: pointer;
-}
-
-#sec-two > .list .thumbnail .caption{
-	padding-left: 15px;
-	padding-bottom: 15px;
-}
-
-#sec-two a{
+.box a{
 	text-decoration: none;
+	color: rgba(0,0,0,.9);
+	padding: .7rem;	
+	background-color: black;
+	color: white;
+	font-weight: 300;
+	font-size: .9rem;
 }
 
-#sec-three{
-	width: 100%;
-	padding: 50px 50px;
-}
-
-#sec-three, #sec-three a{
-	color: #DDD;
-}
-
-.sosmed{
-	display: block;
-	margin-top: 10px;
-}
-
-.sosmed > a{
-	margin: 10px;
-	font-size: 20px;
-}
-
-.sosmed > a:first-child{
-	margin-left: 0px;
-}
-
-.line-separator{
-	width: 100px;
-	border-bottom: 2px #555 solid;
-}
-
-.block-center{
-	margin: 0 auto;
-}
-
-
-/*RESPONSIVE*/
-@media(max-width: 992px){
-	#sec-two > .list{
-		width: 100%;
-	}
-}
-
-@media(max-width: 768px){
-
-	.navbar-brand > span{
-		display: none;
-	}
-
-	#sec-two{
-		height: auto;
-	}
-
-	#sec-two > .list{
-		width: 70%;
-	}
+.box a svg{
+	margin-right: .5rem!important;
 }
